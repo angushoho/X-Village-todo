@@ -1,0 +1,53 @@
+section {
+    margin: 50px 0;
+}
+.list-group-item,
+.list-group-item:hover,
+.list-group-item i,
+.list-group-item i:hover,
+.list-group-item:hover i {
+    transition: 0.3s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.list-group-item {
+    cursor: pointer;
+    /* display mouse hand icon when hover the element */
+}
+.list-group-item:hover {
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 5px 0 #2196F3;
+}
+.list-group-item i {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+/* When Hover list-group-item, show trash and check icon */
+.list-group-item:hover i {
+    opacity: 0.6;
+    pointer-events: auto;
+}
+.list-group-item i:hover {
+    opacity: 1;
+}
+
+.btnRemove {
+    right: 20px;
+}
+
+.btnCheck {
+    right: 50px;
+}
+
+.btnCheck:hover {
+    color: #2eb82e
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none
+}
