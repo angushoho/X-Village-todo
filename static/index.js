@@ -229,6 +229,14 @@ $("body").delegate(".btnCheck", "click", function (e) {
  * Listen: Done icon Click event (show done list)
  */
 $("body").delegate("#done", "click", function (e) {
+    // const recordId = $()
+    // for darker done icon
+    $("#mission").removeClass("btn-selected");
+    $("#mission").addClass("btn-not-selected");
+    $("#done").removeClass("btn-not-selected");
+    $("#done").addClass("btn-selected");
+
+    // hide mission list, and show the done list
     $(".d-flex").hide();
     $(".d-flex").removeClass("d-flex");
     $(".hide").addClass("d-flex");
@@ -236,15 +244,31 @@ $("body").delegate("#done", "click", function (e) {
     // $(".hide").removeClass("hide");
     // $(".d-flex")
 
+    $(".d-flex").append(`<i data-record-id="${recordId}" class="btnNote fas fa-sticky-note"></i>`);
+
 });
 /**
  * Listen: Mission icon Click event (show mission list)
  */
 $("body").delegate("#mission", "click", function (e) {
+    // for the darker mission icon
+    $("#done").removeClass("btn-selected");
+    $("#done").addClass("btn-not-selected");
+    $("#mission").removeClass("btn-not-selected");
+    $("#mission").addClass("btn-selected");
+    
     // $(".d-flex").remove();
     $("#mission-lists").empty();
     getItemsFromServer();
 });
+/**
+ *  Listen: Note icon Click event (input note)
+ */
+$("body").delegate(".btnNote", "click", function (e) {
+    const recordId = $(this).attr("")
+    sendInputNoteRequest();
+});
+
 /**
  * Listen: Double Click Event (Edit a old record)
  */

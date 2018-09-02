@@ -1,6 +1,73 @@
 section {
     margin: 50px 0;
 }
+.navbar {
+    font-size: 25px;
+}
+svg {
+    width: 50px;
+    height: 50px;
+}
+.jumbotron {
+    /*background: linear-gradient(azure,paleturquoise);*/
+    
+    background-color: rgba(31, 143, 235, 0.0);
+    /* background-color: rgb(175,238,238, 70%); */
+    /* background-color: paleturquoise; */
+    /*background: rgba(147,206,222,1);*/
+}
+/* .main-content, */
+body {
+    /* background: url("https://soscet.org/assets/img/pattern.png"); */
+    background: url("./b2.png");    
+    background-attachment: fixed;
+    background-size: cover;
+    /*background-color: rgba(147,206,222,1);*/
+}
+.form-control {
+    max-width: 300px;
+    height: 50px;
+    margin: auto;
+}
+#post-form {
+    text-align: center
+}
+.back-ground {
+    background-color: aquamarine;
+}
+.form-control {
+    position: relative;
+    display: block;
+    margin : 0 auto;
+}
+
+#tips {
+    margin-right: 20px;
+}
+
+#top-board {
+    margin: 50px;
+    margin-left: 25%;
+}
+
+.btn-selected {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.btn-not-selected {
+    color: #fff;
+    background-color: rgba(108, 117, 125, 0.7);
+    border-color: rgba(108, 117, 125, 0.7);;
+}
+
+.list-group {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* height of mission list */
+    line-height: 2.3;
+}
 .list-group-item,
 .list-group-item:hover,
 .list-group-item i,
@@ -12,6 +79,13 @@ section {
 .list-group-item {
     cursor: pointer;
     /* display mouse hand icon when hover the element */
+
+    /* set up font */
+    /* font-family: 'Noto Sans TC', sans-serif; */
+    font-size: 20px;
+    font-family: Microsoft JhengHei, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin-bottom: 5px;
 }
 .list-group-item:hover {
     color: rgba(0, 0, 0, 0.7);
@@ -39,15 +113,47 @@ section {
     right: 50px;
 }
 
+.btnNote {
+    right: 50px;    
+}
+
 .btnCheck:hover {
     color: #2eb82e
 }
 
+.btnNote:hover {
+    color: #ff751a;
+}
+
+
 .btn-group {
     display: flex;
-    justify-content: space-between;
+    margin: 2%;
+    margin-right: 0;
+    justify-content: flex-end;
 }
 
 .hide {
     display: none
+}
+.d-flex {
+    border-radius: .25rem;
+}
+
+ 
+@media (min-width: 1200px) {
+    .list-container {
+      max-width: 800px;
+    }
+}
+@media (min-width: 996px) {
+    .list-container {
+        max-width: 800px;
+    }
+} 
+
+.list-condition {
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
 }

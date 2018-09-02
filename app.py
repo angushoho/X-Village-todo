@@ -15,12 +15,17 @@ migrate = Migrate(app, db)
 class Mission(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(120), nullable=True)
+    # content = db.Column(db.String(250), nullable=True)
     done = db.Column(db.Integer)
+
+
 
 # views
 @app.route('/')
 def index():
     return render_template('index.html')
+
+# @app.route('/GrowList')
 
 
 @app.route('/record', methods=['GET'])
