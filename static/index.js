@@ -25,12 +25,10 @@ function generateDataHtml(data) {
             `
         <li data-record-id="${item['id']}" class="list-group-item  justify-content-between align-items-center ${hide}">
             <div>
-                <span class="item-id">${item['id']}:</span> 
                 <span class="item-title">${item['title']}</span>
             </div>
             <i data-record-id="${item['id']}" class="btnRemove far fa-trash-alt"></i>
             <i data-record-id="${item['id']}" class="btnCheck fas fa-check"></i>
-            <!--<span data-record-title="${item['title']}" class="item-title badge badge-primary badge-pill">${item['title']}</span>-->
         </li>`;
         elementsHtml += element;
     }
