@@ -25,8 +25,9 @@ class Mission(db.Model):
 def index():
     return render_template('index.html')
 
-# @app.route('/GrowList')
-
+@app.route('/GrowList')
+def grow_list():
+    return render_template('grow.html')
 
 @app.route('/record', methods=['GET'])
 def get_missions():

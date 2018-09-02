@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todo List</title>
+    <title>Grow List</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -25,11 +25,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" id="home" href="./">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" id="home" href="./">Home <span class="sr-only">(current)</span></a>
             <!-- <a class="nav-item nav-link active" href="#">Features</a>
             <a class="nav-item nav-link" href="#">TodayList</a>
             <a class="nav-item nav-link" href="#">ColorList</a> -->
-            <a class="nav-item nav-link" id="grow" href="./GrowList">GrowList</a>
+            <a class="nav-item nav-link active" id="grow" href="./GrowList">GrowList</a>
           </div>
           <div class="navbar-nav ml-auto">
               <a class="nav-item nav-link" href="/" id="tips">Tips</a>
@@ -53,22 +53,9 @@
       </nav>
 <div class="main-content">
         <div class="container" id="top-board">
-            <h1 class="display-4">Todo List_</h1>
-            <p class="lead">Amazing Todo List</p>
+            <h1 class="display-4">Grow List_</h1>
+            <p class="lead">The way to improve</p>
         </div>
-    <section class="input-group">
-        <div class="container">
-            <form id="post-form">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <!-- Min: 1 characters -->
-                    <input pattern=".{1,}" required title="1 characters minimum" type="text" class="form-control" id="post-item-title" aria-describedby="title"
-                        placeholder="Enter title">
-                </div>
-                <button class="btn btn-primary" type='submit'>Submit</button>
-            </form>
-        </div>
-    </section>
     <!-- show list -->
     
     <section class="todo-list">

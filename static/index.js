@@ -185,6 +185,28 @@ function sendRemoveItemRequest(recordId) {
         }
     });
 }
+
+/**
+ *  navbar
+ */
+$("body").delegate("#grow", "click", function (e) {
+    {{ url_for('static', filename='list_icon.svg') }}
+    $.ajax({
+        url: BASE_URL + "/GrowList",
+        method: "GET",
+        success: function (data) {
+            console.log(data);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(BASE_URL)
+            console.log(xhr.status);
+            console.log(thrownError);
+        }
+    });
+});
+
+
+
 /**************************************************************
  * Part 5: Main Function (Event Listening)
  **************************************************************/
@@ -193,7 +215,7 @@ getItemsFromServer()
 /**
  * Listen: Form submit event (Create new record)
  */
-$('#post-form').submit(function (e) {
+$("#post-form").submit(function (e) {
     // prevent auto reload the page after sending request
     preventReload(e)
     const inputData = getPostInputData();
@@ -227,7 +249,7 @@ $("body").delegate(".btnCheck", "click", function (e) {
  * Listen: Done icon Click event (show done list)
  */
 $("body").delegate("#done", "click", function (e) {
-    // const recordId = $()
+    const recordId = $(this).attr('data-record-id');
     // for darker done icon
     $("#mission").removeClass("btn-selected");
     $("#mission").addClass("btn-not-selected");
