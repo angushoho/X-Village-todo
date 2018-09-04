@@ -264,7 +264,7 @@ $("body").delegate("#done", "click", function (e) {
     // $(".hide").removeClass("hide");
     // $(".d-flex")
 
-    $(".d-flex").append(`<i data-record-id="${recordId}" class="btnNote fas fa-sticky-note"></i>`);
+    $(".d-flex").append(`<i data-record-id="${recordId}" class="btnNote fas fa-sticky-note" data-toggle="modal" data-target="#exampleModalCenter"></i>`);
 
 });
 /**
@@ -285,8 +285,8 @@ $("body").delegate("#mission", "click", function (e) {
  *  Listen: Note icon Click event (input note)
  */
 $("body").delegate(".btnNote", "click", function (e) {
-    const recordId = $(this).attr("")
-    sendInputNoteRequest();
+    // const recordId = $(this).attr("")
+    // sendInputNoteRequest();
 });
 
 /**

@@ -29,6 +29,10 @@ def index():
 def grow_list():
     return render_template('grow.html')
 
+@app.route('/TodayList')
+def today_list():
+    return render_template('today.html')
+
 @app.route('/record', methods=['GET'])
 def get_missions():
     records = Mission.query.all()
