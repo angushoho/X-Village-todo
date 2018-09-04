@@ -15,7 +15,8 @@ type in '127.0.0.1:5000' and you can see the website
 - After finishing it, you can put it into trash can! (Delete)
 
 ## Feature
-- If you finish a task, but you want to keep it. You can click the check icon beside the trash can. It will move the task to done list.
+- Done list
+  - If you finish a task, but you want to keep it. You can click the check icon beside the trash can. It will move the task to done list.
 
 ## Unfinish Feature
 - Grow List
